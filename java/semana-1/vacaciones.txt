@@ -1,0 +1,33 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Vacaciones {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Random rand = new Random();
+        String [] nombres = new String[3];
+        nombres[0] = "JUAN";
+        nombres[1] = "ALBA";
+        nombres[2] = "YING";
+
+        String [] nombres2 = {"Mohamad", "Jose", "Xavier"};
+
+        System.out.println("Empezamos");
+        int aleatorio = rand.nextInt(nombres2.length);
+        System.out.println(nombres2[aleatorio]);
+        System.out.println("Quieres Seleccionar un nuevo ganador");
+        String pregunta = sc.nextLine();
+        while (pregunta.equalsIgnoreCase("Si")) {
+            int anterior = aleatorio;
+            do {
+                aleatorio = rand.nextInt(nombres2.length);
+            }while (aleatorio == anterior );{
+                System.out.println("El nuevo ganador: "+nombres2[aleatorio]);
+                System.out.println("Quieres Seleccionar un nuevo ganador");
+                pregunta = sc.nextLine();
+            }
+        }
+            System.out.println("Sorteo finalizado");
+            sc.close();
+    }
+}
