@@ -1,17 +1,5 @@
-//1-Condicionales numeros
-//        Preguntas la edad, y según la respuesta, le contestas:
-//        estás en primaria/ secundaria/ universidad/ trabajando
-//        +EXTRA: que si pone menos de 6 o más 120, dar un mensaje de error
-//        2- Condicionales texto
-//        Se pregunta el color favorito al usuario. Si coincide con el color favorito del programador, previamente guardado, mensaje positivo.   Si no, mensaje negativo
-//        3- Bucle for descendente
-//        Se pide un número positivo, y el bucle que imprima desde ese número a cero
-//        4- For con condicionales
-//        Crea un programa que:
-//        Pida al usuario 10 notas (entre 0 y 10).
-
-
 import java.util.Scanner;
+
 public class ejercicio1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
