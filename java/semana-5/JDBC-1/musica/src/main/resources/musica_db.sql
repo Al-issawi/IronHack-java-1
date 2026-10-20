@@ -1,0 +1,10 @@
+
+CREATE DATABASE IF NOT EXISTS musica_db;
+USE musica_db;
+
+CREATE TABLE IF NOT EXISTS discos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(100) NOT NULL,
+    artista VARCHAR(100) NOT NULL,
+    lanzamiento INT
+);
