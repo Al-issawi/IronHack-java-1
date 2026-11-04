@@ -1,0 +1,6 @@
+# Local secrets and build output
+.env
+**/target/
+.idea/
+*.iml
+.DS_Store
