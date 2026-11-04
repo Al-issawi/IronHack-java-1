@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tu pequeña colección musical, organizada en un solo lugar.">
+    <title>Music Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+    <a class="brand" href="#" aria-label="Music Library inicio"><span class="brand-mark">♫</span> music<span>library</span></a>
+    <span class="top-note">TU COLECCIÓN, A TU RITMO</span>
+</header>
+
+<main class="layout">
+    <section class="intro">
+        <p class="eyebrow">COLECCIÓN MUSICAL</p>
+        <h1>Todos tus discos.<br><span>En un mismo lugar.</span></h1>
+        <p class="intro-copy">Guarda tus álbumes favoritos y ten siempre a mano quién los hizo y cuándo llegaron a tu vida.</p>
+        <div class="stats">
+            <div><strong id="total-count">—</strong><span>DISCOS EN TU LISTA</span></div>
+            <div><strong>♫</strong><span>HECHO PARA ESCUCHAR</span></div>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="section-heading">
+            <div><p class="eyebrow">TU BIBLIOTECA</p><h2>La colección</h2></div>
+            <button id="refresh-button" class="text-button" type="button">↻ Actualizar</button>
+        </div>
+
+        <form id="disco-form" class="form-card">
+            <div class="form-title"><span class="plus">＋</span><div><h3>Añadir un disco</h3><p>Un álbum más para tu colección.</p></div></div>
+            <div class="fields">
+                <label>Título del disco<input id="titulo" name="titulo" maxlength="100" placeholder="Ej. Kind of Blue" required></label>
+                <label>Artista<input id="artista" name="artista" maxlength="100" placeholder="Ej. Miles Davis" required></label>
+                <label class="year-field">Año<input id="lanzamiento" name="lanzamiento" type="number" min="1" max="2100" placeholder="1959"></label>
+            </div>
+            <div class="form-footer"><p id="form-message" role="status"></p><button class="primary-button" type="submit">Guardar disco <span>→</span></button></div>
+        </form>
+
+        <div class="list-heading"><h3>Discos guardados</h3><span id="list-caption">Cargando colección…</span></div>
+        <div id="disco-list" class="disco-list" aria-live="polite"><div class="empty-state">Conectando con la biblioteca…</div></div>
+    </section>
+</main>
+<footer><span>Music Library</span><span>Una aplicación de práctica · Java + Spring Boot + MySQL</span></footer>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
