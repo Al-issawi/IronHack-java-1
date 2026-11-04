@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"ZapateriaApp"},{"p":"<Unnamed>","l":"Zapato"},{"p":"<Unnamed>","l":"ZapatoCasual"},{"p":"<Unnamed>","l":"ZapatoDeportivo"},{"p":"<Unnamed>","l":"ZapatoElegante"}];updateSearchResults();
