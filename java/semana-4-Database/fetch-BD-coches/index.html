@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Garage · Catálogo de coches</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="brand-mark">G</span><span>garage<span class="dot">.</span></span></a><div class="api-indicator"><i id="apiDot" class="status-dot"></i><span id="apiStatus">Comprobando API…</span></div></header>
+<main class="container">
+<section class="hero"><div><p class="eyebrow">● &nbsp;CONECTADO A TU BASE DE DATOS</p><h1>Encuentra tu<br><span>próximo coche.</span></h1><p class="intro">Explora los vehículos guardados en tu base de datos. Los datos se cargan directamente desde tu API de Spring Boot.</p><div class="actions"><a href="#catalogo" class="primary">Ver catálogo ↗</a><button id="refreshButton" class="quiet">↻ Actualizar datos</button></div></div>
+<div class="hero-art" aria-hidden="true"><div class="glow"></div><div class="art-tag">GARAGE / 001</div><svg viewBox="0 0 620 300"><defs><linearGradient id="paint" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f7f8fb"/><stop offset=".5" stop-color="#aab3c3"/><stop offset="1" stop-color="#626c7d"/></linearGradient><linearGradient id="glass"><stop stop-color="#263449"/><stop offset="1" stop-color="#64758b"/></linearGradient></defs><ellipse cx="322" cy="244" rx="226" ry="22" fill="#101b2b" opacity=".35"/><path d="M100 207l24-58c8-20 24-34 48-41l103-30c25-7 53-8 81-1l92 25c17 5 31 16 41 31l39 57 35 17-9 34H91l-8-27z" fill="url(#paint)" stroke="#e7edf5" stroke-width="2"/><path d="M191 119l89-26c22-6 48-7 72-1l77 22 32 49H167z" fill="url(#glass)" stroke="#8d98a9" stroke-width="3"/><path d="M292 94l-2 69M372 96l28 68" stroke="#9aa6b5" stroke-width="3" opacity=".7"/><path d="M108 199l57-5M477 194l74 8" stroke="#f4f6fb" stroke-width="7" stroke-linecap="round"/><path d="M90 215h465" stroke="#242e3e" stroke-width="5"/><circle cx="187" cy="228" r="35" fill="#121925" stroke="#778397" stroke-width="8"/><circle cx="187" cy="228" r="15" fill="#bec6d2"/><circle cx="461" cy="228" r="35" fill="#121925" stroke="#778397" stroke-width="8"/><circle cx="461" cy="228" r="15" fill="#bec6d2"/></svg><div class="art-caption">TU COLECCIÓN, EN UN SOLO LUGAR.</div></div></section>
+<section class="stats"><article><b>◈</b><div><strong id="totalCars">—</strong><small>Vehículos en catálogo</small></div></article><article><b>⌕</b><div><strong id="visibleCars">—</strong><small>Resultados visibles</small></div></article><article><b>↗</b><div><strong id="connectionLabel">API</strong><small>Origen de los datos</small></div></article></section>
+<section id="catalogo" class="catalog"><div class="section-head"><div><p class="eyebrow">DESCUBRE LOS VEHÍCULOS</p><h2>Catálogo <span>de coches</span></h2></div><small id="lastUpdated">Esperando datos</small></div>
+<div class="toolbar"><label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar por marca, modelo…" autocomplete="off"><kbd>Ctrl K</kbd></label><label class="filter" for="sortSelect">Ordenar por</label><select id="sortSelect"><option value="default">Predeterminado</option><option value="brand">Marca (A–Z)</option><option value="model">Modelo (A–Z)</option><option value="priceAsc">Precio: menor a mayor</option><option value="priceDesc">Precio: mayor a menor</option></select><button id="clearButton" class="clear">Limpiar</button></div>
+<div id="feedback" class="feedback" role="status" aria-live="polite">Conectando con Spring Boot…</div><div id="carsGrid" class="grid"></div>
+<div id="emptyState" class="empty hidden"><span>⌕</span><h3>No hay coches para mostrar</h3><p>Prueba con otra búsqueda o comprueba la conexión con la API.</p><button id="emptyRetry" class="primary">Volver a cargar</button></div></section>
+<footer><a class="brand" href="#"><span class="brand-mark">G</span><span>garage<span class="dot">.</span></span></a><span>Práctica Fetch API · Spring Boot · MySQL</span><span>Hecho para aprender.</span></footer>
+</main><dialog id="carDialog"><form method="dialog"><button class="close" aria-label="Cerrar">×</button></form><div id="dialogContent"></div></dialog>
+</body></html>
