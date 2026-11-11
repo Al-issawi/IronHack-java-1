@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weatherly · El tiempo ahora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+</head>
+<body>
+<header class="top"><a class="brand" href="#"><span class="mark">W</span> weatherly<span class="period">.</span></a><span class="top-note">OPENWEATHERMAP · CURRENT WEATHER</span></header>
+<main class="wrap">
+<section class="intro"><p class="eyebrow">EL TIEMPO, DE UN VISTAZO</p><h1>¿Qué tiempo<br><span>hace hoy?</span></h1><p class="sub">Consulta las condiciones meteorológicas de cualquier ciudad en tiempo real.</p></section>
+<section class="search-panel">
+<form id="weatherForm">
+<label for="cityInput">Ciudad</label><div class="controls"><input id="cityInput" value="Barcelona" placeholder="Ej. Barcelona" required><button class="search-btn" type="submit">Consultar tiempo <span>↗</span></button></div>
+<label for="apiKeyInput" class="key-label">Tu API key de OpenWeatherMap</label><div class="key-row"><input id="apiKeyInput" type="password" placeholder="Pega aquí tu API key" autocomplete="off" required><button id="toggleKey" type="button" class="toggle">Mostrar</button></div>
+<p class="hint">La clave solo se utiliza en esta sesión. No se guarda ni se incluye en el código.</p>
+<div class="options"><label for="unitsSelect">Unidades</label><select id="unitsSelect"><option value="metric">Métrico (°C)</option><option value="imperial">Imperial (°F)</option><option value="standard">Estándar (K)</option></select><label for="langSelect">Idioma</label><select id="langSelect"><option value="es">Español</option><option value="ca">Català</option><option value="en">English</option><option value="ar">العربية</option></select></div>
+</form></section>
+<section id="message" class="message" role="status" aria-live="polite">Introduce tu API key para empezar. Puedes conseguirla en <a href="https://home.openweathermap.org/api_keys" target="_blank" rel="noreferrer">tu cuenta de OpenWeatherMap</a>.</section>
+<section id="weatherCard" class="weather-card hidden" aria-live="polite">
+<div class="weather-main"><div><p id="place" class="place">—</p><p id="date" class="date">—</p><h2 id="temperature">—</h2><p id="description" class="description">—</p></div><img id="weatherIcon" alt="Icono del tiempo" src=""></div>
+<div class="divider"></div><div class="details">
+<div><span> SENSACIÓN TÉRMICA</span><strong id="feelsLike">—</strong></div>
+<div><span>HUMEDAD</span><strong id="humidity">—</strong></div>
+<div><span>VIENTO</span><strong id="wind">—</strong></div>
+<div><span>NUBOSIDAD</span><strong id="clouds">—</strong></div>
+<div><span>PRESIÓN</span><strong id="pressure">—</strong></div>
+<div><span>VISIBILIDAD</span><strong id="visibility">—</strong></div>
+</div><p id="updated" class="updated"></p>
+</section>
+<section class="lesson"><p class="eyebrow">LO QUE PRACTICAS EN ESTE LAB</p><div class="lesson-grid"><article><b>01</b><h3>API key</h3><p>Autenticación con una clave personal enviada como parámetro <code>appid</code>.</p></article><article><b>02</b><h3>Fetch + JSON</h3><p>Petición HTTP, gestión de errores y lectura de propiedades anidadas.</p></article><article><b>03</b><h3>DOM dinámico</h3><p>Actualización de textos, estilos e iconos según la respuesta recibida.</p></article></div></section>
+<footer><span>Weatherly · Práctica JavaScript Fetch</span><a href="https://openweathermap.org/current" target="_blank" rel="noreferrer">Documentación oficial ↗</a></footer>
+</main>
+</body></html>
