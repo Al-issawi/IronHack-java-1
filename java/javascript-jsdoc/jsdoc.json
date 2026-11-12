@@ -1,0 +1,17 @@
+{
+  "source": {
+    "include": ["nivel-1", "nivel-2"],
+    "includePattern": ".+\\.js$",
+    "exclude": ["node_modules"]
+  },
+  "plugins": [],
+  "opts": {
+    "destination": "docs",
+    "recurse": true,
+    "readme": "README.md"
+  },
+  "templates": {
+    "cleverLinks": true,
+    "monospaceLinks": true
+  }
+}
