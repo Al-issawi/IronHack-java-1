@@ -4,14 +4,11 @@
     "includePattern": ".+\\.js$",
     "exclude": ["node_modules"]
   },
-  "plugins": [],
   "opts": {
     "destination": "docs",
     "recurse": true,
-    "readme": "README.md"
+    "readme": "README.md",
+    "tutorials": "tutoriales"
   },
-  "templates": {
-    "cleverLinks": true,
-    "monospaceLinks": true
-  }
+  "tutorials": "tutoriales"
 }
